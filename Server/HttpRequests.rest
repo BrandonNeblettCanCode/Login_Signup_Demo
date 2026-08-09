@@ -1,0 +1,11 @@
+###
+POST http://localhost:5039/api/server/signup
+Accept: application/json
+Content-Type: application/json
+
+{
+    "Username": "User123abc",
+    "Password": "Password123@"
+}
+
+###
