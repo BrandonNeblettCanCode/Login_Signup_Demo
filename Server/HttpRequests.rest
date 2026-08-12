@@ -9,3 +9,12 @@ Content-Type: application/json
 }
 
 ###
+
+POST http://localhost:5039/api/server/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "Username": "User123abc",
+    "Password": "Password123@"
+}

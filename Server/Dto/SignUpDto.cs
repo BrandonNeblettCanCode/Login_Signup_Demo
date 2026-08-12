@@ -11,5 +11,8 @@ namespace Server.Dto
         [Required(ErrorMessage = "Invalid 'Password'")]
         [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$", ErrorMessage = "'Password' is invalid or too weak")]
         public string Password {get; set;} = string.Empty;
+
+        [EmailAddress(ErrorMessage = "Please provide an valid 'Email Address'")]
+        public string Email {get; set;} = string.Empty;
     }
 }
