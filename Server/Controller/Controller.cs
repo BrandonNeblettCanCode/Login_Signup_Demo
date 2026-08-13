@@ -93,7 +93,7 @@ namespace Server.Controller
                 return NotFound("No account found associated with email, please try again");
             
             var otp = generateOTP();
-            SendEmail(dto.Email,"Demos@gmail.com", otp);
+            await SendEmailAsync(dto.Email, "demos@gmail.com", otp);
             userCheck.Otp = generateJwtToken(userCheck, dto.Otp!, new DateTime().AddMinutes(3));
 
             return Ok("Email verified");
@@ -106,13 +106,14 @@ namespace Server.Controller
             if(getOtp is null)
                 return NotFound("No account found associated with email, please create an new account");
 
+           // iMPLEMENT A method to check or decode the otp token and then verify if the user sent otp matches
             var state = await DecodeToken(getOtp.Otp!);
-            
+            var user = state.User;
 
-
-            //     return Ok(true);
-            // else 
-            //     return BadRequest("Invalid 'Otp', please try again");
+            if(user.HasClaim(c => c.Value == dto.Otp))
+                return Ok(true);
+            else 
+                return BadRequest("Invalid 'Otp', please try again");
         }
 
         public string generateOTP()
@@ -126,7 +127,7 @@ namespace Server.Controller
             return otp;
         }
 
-        public async void SendEmail(string recipientEmail, string senderEmail, string body)
+        public async Task SendEmailAsync(string recipientEmail, string senderEmail, string body)
         {
             var message = new MimeMessage();
 
