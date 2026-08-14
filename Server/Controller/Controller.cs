@@ -65,7 +65,8 @@ namespace Server.Controller
             newUser = new Users
             {
                 Username = data.Username,
-                Password = new PasswordHasher<Users>().HashPassword(newUser, data.Password)
+                Password = new PasswordHasher<Users>().HashPassword(newUser, data.Password),
+                Email = data.Email
             };
 
             await _context.Users.AddAsync(newUser);

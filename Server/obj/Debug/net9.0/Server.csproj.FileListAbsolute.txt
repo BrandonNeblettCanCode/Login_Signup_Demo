@@ -371,3 +371,6 @@ C:\MS VS Code\Demos\Server\obj\Debug\net9.0\swae.build.ex.cache
 C:\MS VS Code\Demos\Server\obj\Debug\net9.0\Server.csproj.Up2Date
 C:\MS VS Code\Demos\Server\obj\Debug\net9.0\Server.genruntimeconfig.cache
 C:\MS VS Code\Demos\Server\obj\Debug\net9.0\ref\Server.dll
+A:\Demos\Server\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+A:\Demos\Server\bin\Debug\net9.0\MailKit.dll
+A:\Demos\Server\bin\Debug\net9.0\MimeKit.dll
