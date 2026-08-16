@@ -44,7 +44,7 @@ namespace Server.Controller
             if(new PasswordHasher<Users>().VerifyHashedPassword(userCheck, userCheck.Password, data.Password) == PasswordVerificationResult.Failed)
                 return BadRequest("Incorrect 'Username' or 'Password'");
 
-            var jwt = generateJwtToken(userCheck, null!, new DateTime().AddDays(1));
+            var jwt = generateJwtToken(userCheck, null!, DateTime.UtcNow.AddDays(1));
             if(string.IsNullOrWhiteSpace(jwt))
                 return BadRequest("Something went wrong");
             
@@ -73,7 +73,7 @@ namespace Server.Controller
             try
             {
                 await _context.SaveChangesAsync();
-                var jwt = generateJwtToken(newUser, null!, new DateTime().AddDays(1));
+                var jwt = generateJwtToken(newUser, null!, DateTime.UtcNow.AddDays(1));
 
                 return Ok(jwt);
             }
@@ -95,7 +95,9 @@ namespace Server.Controller
             
             var otp = generateOTP();
             await SendEmailAsync(dto.Email, "demos@gmail.com", otp);
-            userCheck.Otp = generateJwtToken(userCheck, dto.Otp!, new DateTime().AddMinutes(3));
+            userCheck.Otp = generateJwtToken(userCheck, otp, DateTime.UtcNow.AddSeconds(20));
+
+            await _context.SaveChangesAsync();
 
             return Ok("Email verified");
         }
@@ -108,6 +110,9 @@ namespace Server.Controller
                 return NotFound("No account found associated with email, please create an new account");
 
            // iMPLEMENT A method to check or decode the otp token and then verify if the user sent otp matches
+
+           try
+           {
             var state = await DecodeToken(getOtp.Otp!);
             var user = state.User;
 
@@ -115,17 +120,16 @@ namespace Server.Controller
                 return Ok(true);
             else 
                 return BadRequest("Invalid 'Otp', please try again");
+           }
+           catch (System.Exception)
+           {
+                return BadRequest("OTP has expired please request another one");
+           }
         }
 
         public string generateOTP()
         {
-
-            string otp = ""; 
-            for (int i = 0; i < 5; i++)
-            {
-                otp += RandomNumberGenerator.GetInt32(10000, 100000).ToString();
-            }
-            return otp;
+            return RandomNumberGenerator.GetInt32(0, 1_000_000).ToString("D6");;
         }
 
         public async Task SendEmailAsync(string recipientEmail, string senderEmail, string body)
@@ -144,25 +148,50 @@ namespace Server.Controller
             using var client = new SmtpClient();
 
             await client.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            await client.AuthenticateAsync(_config.GetValue<string>("Mail: Username")!, _config.GetValue<string>("Mail: Password")!);
+            await client.AuthenticateAsync(_config.GetValue<string>("Mail:Username")!, _config.GetValue<string>("Mail:Password")!);
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
         }
 
         public async Task<AuthenticationState> DecodeToken(string jwt)
         {
-            var JwtHandler = new JwtSecurityTokenHandler();
-            var tokenData =  JwtHandler.ReadJwtToken(jwt);
+            try
+            {    
+                var JwtHandler = new JwtSecurityTokenHandler();
+                var tokenValidation = JwtHandler.ValidateToken(
+                jwt, 
+                new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(_config.GetValue<string>("Settings:Token") ?? "")
+                    ),
+                    ValidateIssuer = true,
+                    ValidIssuer = _config.GetValue<string>("Settings:Issuer"),
+                    ValidateAudience = true,
+                    ValidAudience = _config.GetValue<string>("Settings:Audience"),
+                    RequireExpirationTime = true,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero
+                },
+                out _);
 
-            var identity = new ClaimsIdentity(tokenData.Claims, "jwt");
-            var otp = new ClaimsPrincipal(identity);
+                var identity = new ClaimsIdentity(tokenValidation.Claims, "jwt");
+                var otp = new ClaimsPrincipal(identity);
 
-            return new AuthenticationState(otp);
+                return new AuthenticationState(otp);
+            }
+            catch (SecurityTokenExpiredException ex)
+            {
+                Console.WriteLine(ex.Expires);
+                throw;
+            }
         }
 
 
         public string generateJwtToken(Users user, string otp, DateTime expires)
         {
+
             var claims =  new List<Claim>();
             if (otp is not null)
             {

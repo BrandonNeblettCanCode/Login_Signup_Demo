@@ -6,7 +6,7 @@ Content-Type: application/json
 {
     "Username": "User123abc",
     "Password": "Password123@",
-    "Email": "brannd101@gmail.com"
+    "Email": "NeblettProtonMail2026@pm.me"
 }
 
 ###
@@ -26,5 +26,15 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "Email": "brannd102@gmail.com"
+    "Email": "NeblettProtonMail2026@pm.me"
+}
+
+###
+POST http://localhost:5039/api/server/otp
+Accept: application/json
+Content-Type: application/json
+
+{
+    "Otp": "860427",
+    "Email": "NeblettProtonMail2026@pm.me"
 }
