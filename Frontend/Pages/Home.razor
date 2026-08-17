@@ -1,7 +1,68 @@
-﻿@page "/"
+﻿@using Frontend.Dtos
+@using Frontend.Services
+@using Microsoft.AspNetCore.Components.Authorization;
+@inject HttpService httpService;
 
-<PageTitle>Home</PageTitle>
+@page "/"
 
-<h1>Hello, world!</h1>
+<AuthorizeView>
+    <Authorized>
+        <p>You were logged in</p>
+        <button class="btn btn-danger p-2 mt-3" @onclick="Logout">Logout</button>
+    </Authorized>
+    <NotAuthorized Context="NotAuth">
+        @if(!form){
+            <EditForm Model="loginDto" OnValidSubmit="LoginAsync">
+                <h2>Login</h2>
+                <div>
+                    <label for="username">Username</label>
+                    <InputText @bind-Value="loginDto.Username" id="username" />
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <InputText @bind-Value="loginDto.Password" id="password" />
+                </div>
+            </EditForm>
+        }
+        else {
+            <EditForm Model="signupDto" OnValidSubmit="SignUpAsync">
+                <h2>Login</h2>
+                <div>
+                    <label for="username">Username</label>
+                    <InputText @bind-Value="signupDto.Username" id="username" />
+                </div>
+                <div>
+                    <label for="username">Email</label>
+                    <InputText @bind-Value="signupDto.Email" id="username" />
+                </div>
+                <div>
+                    <label for="username">Password</label>
+                    <InputText @bind-Value="signupDto.Password" id="username" />
+                </div>
+                <div>
+                    <label for="password">Confirm Password</label>
+                    <InputText @bind-Value="signupDto.ConfirmPassword" id="password" />
+                </div>
+            </EditForm>
+        }
+    </NotAuthorized>
+</AuthorizeView>
 
-Welcome to your new app.
+@code {
+    private bool form = false;
+
+    public LoginDto loginDto = new LoginDto();
+    public SignUpDto signupDto = new SignUpDto();
+
+    public void Logout(){
+        httpService.Logout();
+    }
+
+     public async Task LoginAsync(){
+        var response = await httpService.LoginAsync(loginDto);
+     }
+
+     public async Task SignUpAsync(){
+        var response = await httpService.SignUpAsync(signupDto);
+     }
+}
