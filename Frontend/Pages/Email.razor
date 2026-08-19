@@ -1,0 +1,31 @@
+@using Frontend.Services;
+
+@page "/emailverify"
+@using Frontend.Dtos
+@inject HttpService httpService;
+
+<EditForm Model="otpDto" OnValidSubmit="EmailVerify" class="d-flex flex-column">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <label class="fs-3" for="email">Please enter an "Email" associated with an account</label>
+        <InputText @bind-Value="otpDto.Email" class="mt-2"/>
+    </div>
+    <button class="btn btn-info p-2 mt-4 mx-auto">Submit</button>
+    <p class="mt-4 mx-auto">@errorMsg</p>
+</EditForm>
+
+@code {
+    public OtpDto otpDto = new OtpDto();
+    public string errorMsg = string.Empty;
+
+    public async Task EmailVerify(){
+        try {
+            errorMsg = "";
+            var response = await httpService.EmailAsync(otpDto);
+            errorMsg = "'Email' verified";
+        } catch (Exception Ex) {
+            errorMsg = Ex.Message;
+        }
+
+    }
+
+}

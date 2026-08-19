@@ -34,96 +34,154 @@ namespace Server.Controller
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(LoginDto data)
         {
-            if(!ModelState.IsValid)
-                return BadRequest(ModelState);
+            try {
+                if(!ModelState.IsValid)
+                {
+                    var errorMessages = ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage).Where(x => !string.IsNullOrEmpty(x)).Distinct();
+                    return  BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = string.Join(";", errorMessages)    
+                    });
+                }
 
-            var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Username == data.Username);
-            if(userCheck is null)
-                return BadRequest("Incorrect 'Username' or 'Password'");
+                var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Username == data.Username);
+                if(userCheck is null)
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "Incorrect 'Username' or 'Password'"
+                    });
 
-            if(new PasswordHasher<Users>().VerifyHashedPassword(userCheck, userCheck.Password, data.Password) == PasswordVerificationResult.Failed)
-                return BadRequest("Incorrect 'Username' or 'Password'");
+                if(new PasswordHasher<Users>().VerifyHashedPassword(userCheck, userCheck.Password, data.Password) == PasswordVerificationResult.Failed)
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "Incorrect 'Username' or 'Password'"
+                    });
 
-            var jwt = generateJwtToken(userCheck, null!, DateTime.UtcNow.AddDays(1));
-            if(string.IsNullOrWhiteSpace(jwt))
-                return BadRequest("Something went wrong");
+                var jwt = generateJwtToken(userCheck, null!, DateTime.UtcNow.AddDays(1));
+                if(string.IsNullOrWhiteSpace(jwt))
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "Something went wrong, try again later"
+                    });
             
-            return Ok(jwt);
+                return Ok(new ApiResponse {Success = true, Message = jwt});
+            }
+            catch (DbException ex) {
+                return BadRequest(new ApiResponse {Success = false, Errors = ex.Message});
+            }            
         }
 
         [HttpPost("signup")]
         public async Task<ActionResult<string>> SignUp(SignUpDto data)
         {
-            if(!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Username == data.Username);
-            if(userCheck is not null)
-                return BadRequest("'Username' is already taken");
-            
-            var newUser = new Users(); 
-            newUser = new Users
-            {
-                Username = data.Username,
-                Password = new PasswordHasher<Users>().HashPassword(newUser, data.Password),
-                Email = data.Email
-            };
-
-            await _context.Users.AddAsync(newUser);
             try
             {
+                if(!ModelState.IsValid) {
+                    var errorMessages = ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage).Where(x => !string.IsNullOrEmpty(x)).Distinct();
+                    return  BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = string.Join(";", errorMessages)    
+                    });
+                }
+
+                var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Username == data.Username);
+                if(userCheck is not null)
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "Username' is already taken, please try another one"
+                    });
+
+                var emailCheck = await _context.Users.FirstOrDefaultAsync(u => u.Email == data.Email);
+                if(emailCheck is not null)
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "Email Address' is already taken, please try another one"
+                    });
+                
+                var newUser = new Users(); 
+                newUser = new Users
+                {
+                    Username = data.Username,
+                    Password = new PasswordHasher<Users>().HashPassword(newUser, data.Password),
+                    Email = data.Email
+                };
+
+                await _context.Users.AddAsync(newUser);
                 await _context.SaveChangesAsync();
+                
                 var jwt = generateJwtToken(newUser, null!, DateTime.UtcNow.AddDays(1));
 
-                return Ok(jwt);
+                return Ok(new ApiResponse {Success = true, Message = jwt});
             }
-            catch (DbException ex)
+            catch (DbException Ex)
             {
-                return BadRequest("Something went wrong, please try again later");
+                return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});
             }
         }
 
         [HttpPost("emailverify")]
         public async Task<ActionResult<string>> EmailVerify(OtpDto dto)
         {
-            if(!ModelState.IsValid)
-                return BadRequest("Invalid 'Email Address'");
+            try {
+                if(!ModelState.IsValid) {
+                    var errorMessages = ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage).Where(x => !string.IsNullOrEmpty(x)).Distinct();
+                    return  BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = string.Join(";", errorMessages)    
+                    });
+                }
 
-            var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
-            if(userCheck is null)
-                return NotFound("No account found associated with email, please try again");
-            
-            var otp = generateOTP();
-            await SendEmailAsync(dto.Email, "demos@gmail.com", otp);
-            userCheck.Otp = generateJwtToken(userCheck, otp, DateTime.UtcNow.AddSeconds(20));
+                var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
+                if(userCheck is null)
+                    return BadRequest(new ApiResponse
+                    {
+                        Success = false,
+                        Errors = "No account found associated with email, please try again"
+                    });
+                
+                var otp = generateOTP();
+                await SendEmailAsync(dto.Email, "demos@gmail.com", otp);
+                userCheck.Otp = generateJwtToken(userCheck, otp, DateTime.UtcNow.AddSeconds(20));
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-            return Ok("Email verified");
+                return Ok(new ApiResponse {Success = true, Message = "Email verified"});
+
+            } catch (Exception Ex) {
+                return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});
+            }
         }
         
         [HttpPost("otp")]
         public async Task<ActionResult<bool>> OtpHandler(OtpDto dto)
         {
-            var getOtp = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
-            if(getOtp is null)
-                return NotFound("No account found associated with email, please create an new account");
-
-           // iMPLEMENT A method to check or decode the otp token and then verify if the user sent otp matches
-
            try
            {
-            var state = await DecodeToken(getOtp.Otp!);
-            var user = state.User;
+                var getOtp = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
+                if(getOtp is null)
+                    return BadRequest(new ApiResponse {Success = false, Errors = "No account found associated with email, please create an new account"});
 
-            if(user.HasClaim(c => c.Value == dto.Otp))
-                return Ok(true);
-            else 
-                return BadRequest("Invalid 'Otp', please try again");
+            // Implement a method to check or decode the otp token and then verify if the user sent otp matches
+
+                var state = await DecodeToken(getOtp.Otp!);
+                var user = state.User;
+
+                if(user.HasClaim(c => c.Value == dto.Otp))
+                    return Ok(new ApiResponse {Success = true, Message = true});
+                else 
+                    return BadRequest(new ApiResponse {Success = false, Errors = "Invalid 'Otp', please try again"});
            }
-           catch (System.Exception)
+           catch (Exception Ex)
            {
-                return BadRequest("OTP has expired please request another one");
+                return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});
            }
         }
 
