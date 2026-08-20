@@ -7,7 +7,7 @@ namespace Frontend.Dtos
         [EmailAddress(ErrorMessage = "Please provide a valid 'Email Address'")]
         public string? Email {get; set;} = string.Empty;
 
-        [RegularExpression("^[0-9]{8}$", ErrorMessage = "Please provide a valid 'OTP'")]
+        [RegularExpression("^\\d{6}$", ErrorMessage = "Please provide a valids 'OTP'")]
         public string? Otp {get; set;} = string.Empty;
     }
 }

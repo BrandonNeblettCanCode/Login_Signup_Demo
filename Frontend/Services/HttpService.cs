@@ -19,18 +19,16 @@ namespace Frontend.Services
         {
             try
             {
-
                 var request = await _http.PostAsJsonAsync("login", dto);
                 var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
-                    Console.WriteLine(response.Message);
 
-                if (response?.Success != true)
-                {
-                    throw new Exception(response.Message);
-                }
+                if (response is null)
+                    throw new Exception("Something went wrong, please try again later");
+                else if (response is not null && response?.Success != true)
+                    throw new Exception(response.Errors);
                 else
                 {
-                    return response.Message!;
+                    return response!.Message!;
                 }
             }
             catch (Exception Ex)
@@ -44,23 +42,16 @@ namespace Frontend.Services
             try
             {
                 var request = await _http.PostAsJsonAsync("signup", dto);
-                if(!request.IsSuccessStatusCode)
-                {
-                    switch(request.StatusCode)
-                    {
-                        case HttpStatusCode.BadRequest:
-                        {
-                            throw new Exception("'Username' already taken");
-                        }
-                        case HttpStatusCode.Conflict:
-                        {
-                            throw new Exception("'Email' aleady taken");
-                        }
-                    }
-                }
+                var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
 
-                var result = await request.Content.ReadAsStringAsync();
-                return result;
+                if (response is null)
+                    throw new Exception("Something went wrong, please try again later");
+                else if (response is not null && response?.Success != true)
+                    throw new Exception(response.Errors);
+                else
+                {
+                    return response!.Message!;
+                }
             }
             catch (Exception Ex)
             {
@@ -68,24 +59,20 @@ namespace Frontend.Services
             }
         }
 
-        public async Task<string> EmailAsync(OtpDto dto)
+        public async Task<ApiResponse> EmailAsync(OtpDto dto)
         {
             try
             {
                 var request = await _http.PostAsJsonAsync("emailVerify", dto);
-                if(!request.IsSuccessStatusCode)
-                {
-                    switch(request.StatusCode)
-                    {
-                        case HttpStatusCode.BadRequest:
-                        {
-                            throw new Exception("Incorrect 'Email Address'");
-                        }
-                    }
-                }
+                var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
 
-                var result = await request.Content.ReadAsStringAsync();
-                return result;
+                if(response is null)
+                    throw new Exception("Something went wrong, please try again later");
+
+                if(response.Success != true)
+                    throw new Exception(response.Errors);
+
+                return response;
             }
             catch (Exception Ex)
             {   

@@ -1,16 +1,20 @@
+@using System.Linq.Expressions
 @using Frontend.Services;
 
 @page "/emailverify"
 @using Frontend.Dtos
 @inject HttpService httpService;
+@inject NavigationManager Nav;
 
 <EditForm Model="otpDto" OnValidSubmit="EmailVerify" class="d-flex flex-column">
+    <DataAnnotationsValidator />
     <div class="d-flex flex-column justify-content-center align-items-center">
         <label class="fs-3" for="email">Please enter an "Email" associated with an account</label>
         <InputText @bind-Value="otpDto.Email" class="mt-2"/>
     </div>
     <button class="btn btn-info p-2 mt-4 mx-auto">Submit</button>
     <p class="mt-4 mx-auto">@errorMsg</p>
+    <ValidationSummary class="mx-auto"/>
 </EditForm>
 
 @code {
@@ -21,7 +25,11 @@
         try {
             errorMsg = "";
             var response = await httpService.EmailAsync(otpDto);
-            errorMsg = "'Email' verified";
+            
+            if(response.Success == true)
+                Nav.NavigateTo($"/otp/{otpDto.Email}");
+            else 
+                throw new Exception()
         } catch (Exception Ex) {
             errorMsg = Ex.Message;
         }

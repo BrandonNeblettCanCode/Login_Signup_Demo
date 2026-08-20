@@ -175,7 +175,7 @@ namespace Server.Controller
                 var user = state.User;
 
                 if(user.HasClaim(c => c.Value == dto.Otp))
-                    return Ok(new ApiResponse {Success = true, Message = true});
+                    return Ok(new ApiResponse {Success = true, Message = user.FindFirst(ClaimTypes.NameIdentifier)?.Value});
                 else 
                     return BadRequest(new ApiResponse {Success = false, Errors = "Invalid 'Otp', please try again"});
            }
