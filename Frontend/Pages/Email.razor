@@ -27,9 +27,9 @@
             var response = await httpService.EmailAsync(otpDto);
             
             if(response.Success == true)
-                Nav.NavigateTo($"/otp/{otpDto.Email}");
+                Nav.NavigateTo($"/otp/{response.Message}");
             else 
-                throw new Exception()
+                throw new Exception(response.Errors);
         } catch (Exception Ex) {
             errorMsg = Ex.Message;
         }

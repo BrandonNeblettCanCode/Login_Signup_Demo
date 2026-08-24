@@ -1,6 +1,8 @@
 using System.Net;
 using System.Net.Http.Json;
+using Azure.Core;
 using Frontend.Dtos;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Frontend.Services
 {
@@ -76,6 +78,28 @@ namespace Frontend.Services
             }
             catch (Exception Ex)
             {   
+                throw new Exception(Ex.Message);
+            }
+        }
+
+        public async Task<ApiResponse> SendOtpAsync(OtpDto otpDto)
+        {
+            try
+            {
+                var request = await _http.PostAsJsonAsync("sendotp", otpDto.Otp);
+                var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
+
+                if(response is null)
+                    throw new Exception("Something went wrong, please try again later");
+                if(response.Success != true)
+                    throw new Exception(response.Errors);
+                else
+                {
+                    return response;
+                }
+            }
+            catch (Exception Ex)
+            {
                 throw new Exception(Ex.Message);
             }
         }

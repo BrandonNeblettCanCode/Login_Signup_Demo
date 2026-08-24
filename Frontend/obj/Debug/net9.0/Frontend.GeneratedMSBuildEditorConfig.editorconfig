@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[A:/Demos/Frontend/Pages/OTP.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT1RQLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [A:/Demos/Frontend/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

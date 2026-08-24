@@ -8,8 +8,6 @@ A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.1p93gcv9fh.j
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.9msu8ucn2h.wasm
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.qrl1fuqt3c.js
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.4h6vbtxs93.pdb
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.9eoy8ivsgv.wasm
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
@@ -280,7 +278,6 @@ A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.Dispatch
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Linq.Expressions.n4kp8xrm7p.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Threading.Thread.k53q2qtn4x.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.d1nka2rlr8.wasm.gz
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.4h6vbtxs93.pdb.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.l68t6vbs1c.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.InteropServices.wtgp5mxw1c.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Net.Quic.bk3iyzagtw.wasm.gz
@@ -344,7 +341,6 @@ A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.IO.Pipes.wadz9p1757
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.da83xzpz5r.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.VisualBasic.Core.790ssxljcz.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.IO.FileSystem.ci93a4roia.wasm.gz
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.9eoy8ivsgv.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Security.Permissions.m9hbxwov85.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.Extensions.wmorg0bfhl.wasm.gz
 A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Xml.XPath.XDocument.7m1x4rd2b8.wasm.gz
@@ -1215,9 +1211,6 @@ A:\Demos\Frontend\obj\Debug\net9.0\compressed\326zqjge7o-nib9cvonux.gz
 A:\Demos\Frontend\obj\Debug\net9.0\compressed\iw0ae27wof-tjcz0u77k5.gz
 A:\Demos\Frontend\obj\Debug\net9.0\compressed\285b9jwisc-tptq2av103.gz
 A:\Demos\Frontend\obj\Debug\net9.0\compressed\gigkqu8b6v-lfu7j35m59.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-9eoy8ivsgv.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-4h6vbtxs93.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-ht1g4ipkul.gz
 A:\Demos\Frontend\obj\Debug\net9.0\staticwebassets.build.json
 A:\Demos\Frontend\obj\Debug\net9.0\staticwebassets.development.json
 A:\Demos\Frontend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1232,3 +1225,10 @@ A:\Demos\Frontend\obj\Debug\net9.0\Frontend.dll
 A:\Demos\Frontend\obj\Debug\net9.0\refint\Frontend.dll
 A:\Demos\Frontend\obj\Debug\net9.0\Frontend.pdb
 A:\Demos\Frontend\obj\Debug\net9.0\ref\Frontend.dll
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.c03bt9jej1.pdb
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.zcexm057ac.wasm
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.c03bt9jej1.pdb.gz
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.zcexm057ac.wasm.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-zcexm057ac.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-c03bt9jej1.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-sjxvbobz3r.gz

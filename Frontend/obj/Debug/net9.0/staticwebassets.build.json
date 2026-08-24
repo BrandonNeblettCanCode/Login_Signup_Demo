@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hq39CXQ5A1cgrHm4uRGb35vmkVp3Sco0PIC/V79tfWo=",
+  "Hash": "fu4FvbslY8TnSPdU/JwR/qv+43NqK3qUrWwPs0p2FCI=",
   "Source": "Frontend",
   "BasePath": "/",
   "Mode": "Root",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "ht1g4ipkul",
-      "Integrity": "y/aGWTj7JYuhJwJiDfEwFzo8GDn8i2SiRkVlZVLakB8=",
+      "Fingerprint": "sjxvbobz3r",
+      "Integrity": "aIlo3rNgsve8zBXneehGaWY3ZqrCrRgPawD+scekai0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\blazor.boot.json"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "4h6vbtxs93",
-      "Integrity": "eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I=",
+      "Fingerprint": "c03bt9jej1",
+      "Integrity": "/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\Frontend.pdb"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "9eoy8ivsgv",
-      "Integrity": "/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ=",
+      "Fingerprint": "zcexm057ac",
+      "Integrity": "DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\webcil\\Frontend.wasm"
@@ -6170,12 +6170,12 @@
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm"
     },
     {
-      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-4h6vbtxs93.gz",
+      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-c03bt9jej1.gz",
       "SourceId": "Frontend",
       "SourceType": "Computed",
       "ContentRoot": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Frontend#[.{fingerprint=4h6vbtxs93}]!.pdb.gz",
+      "RelativePath": "_framework/Frontend#[.{fingerprint=c03bt9jej1}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -6184,8 +6184,8 @@
       "RelatedAsset": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zcziz4wdvq",
-      "Integrity": "famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM=",
+      "Fingerprint": "6np2sbpwzn",
+      "Integrity": "rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.pdb"
@@ -7787,12 +7787,12 @@
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.IO.FileSystem.wasm"
     },
     {
-      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-9eoy8ivsgv.gz",
+      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-zcexm057ac.gz",
       "SourceId": "Frontend",
       "SourceType": "Computed",
       "ContentRoot": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/Frontend#[.{fingerprint=9eoy8ivsgv}]!.wasm.gz",
+      "RelativePath": "_framework/Frontend#[.{fingerprint=zcexm057ac}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -7801,8 +7801,8 @@
       "RelatedAsset": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9pd6jg8ear",
-      "Integrity": "I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0=",
+      "Fingerprint": "n5nplm6pam",
+      "Integrity": "ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.wasm"
@@ -8627,7 +8627,7 @@
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.Reflection.Emit.wasm"
     },
     {
-      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-ht1g4ipkul.gz",
+      "Identity": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-sjxvbobz3r.gz",
       "SourceId": "Frontend",
       "SourceType": "Computed",
       "ContentRoot": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\",
@@ -8641,8 +8641,8 @@
       "RelatedAsset": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "1cm8fd0mlt",
-      "Integrity": "75lMRfK1X0SJCKBPSrY6AfIYbjQpPHGB8deV7uTw6vo=",
+      "Fingerprint": "hih4tnp52k",
+      "Integrity": "qfrQKj9YrxYgQHJ8Jz2dc2jHZPvNjeRsh9n4cmBAWhc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -12561,11 +12561,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"y/aGWTj7JYuhJwJiDfEwFzo8GDn8i2SiRkVlZVLakB8=\""
+          "Value": "\"aIlo3rNgsve8zBXneehGaWY3ZqrCrRgPawD+scekai0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12575,18 +12575,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y/aGWTj7JYuhJwJiDfEwFzo8GDn8i2SiRkVlZVLakB8="
+          "Value": "sha256-aIlo3rNgsve8zBXneehGaWY3ZqrCrRgPawD+scekai0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-ht1g4ipkul.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-sjxvbobz3r.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000070671378"
+          "Quality": "0.000070696359"
         }
       ],
       "ResponseHeaders": [
@@ -12596,15 +12596,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14149"
+          "Value": "14144"
         },
         {
           "Name": "ETag",
-          "Value": "\"75lMRfK1X0SJCKBPSrY6AfIYbjQpPHGB8deV7uTw6vo=\""
+          "Value": "\"qfrQKj9YrxYgQHJ8Jz2dc2jHZPvNjeRsh9n4cmBAWhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 16:55:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12624,19 +12624,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"y/aGWTj7JYuhJwJiDfEwFzo8GDn8i2SiRkVlZVLakB8=\""
+          "Value": "W/\"aIlo3rNgsve8zBXneehGaWY3ZqrCrRgPawD+scekai0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-y/aGWTj7JYuhJwJiDfEwFzo8GDn8i2SiRkVlZVLakB8="
+          "Value": "sha256-aIlo3rNgsve8zBXneehGaWY3ZqrCrRgPawD+scekai0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-ht1g4ipkul.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\njn95cf9xo-sjxvbobz3r.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12645,7 +12645,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14149"
+          "Value": "14144"
         },
         {
           "Name": "Content-Type",
@@ -12653,11 +12653,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"75lMRfK1X0SJCKBPSrY6AfIYbjQpPHGB8deV7uTw6vo=\""
+          "Value": "\"qfrQKj9YrxYgQHJ8Jz2dc2jHZPvNjeRsh9n4cmBAWhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 16:55:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12675,7 +12675,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-75lMRfK1X0SJCKBPSrY6AfIYbjQpPHGB8deV7uTw6vo="
+          "Value": "sha256-qfrQKj9YrxYgQHJ8Jz2dc2jHZPvNjeRsh9n4cmBAWhc="
         }
       ]
     },
@@ -12741,7 +12741,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Thu, 13 Feb 2025 03:03:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12794,7 +12794,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Thu, 13 Feb 2025 03:03:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12886,7 +12886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12947,7 +12947,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13039,7 +13039,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13139,7 +13139,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13200,7 +13200,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13253,7 +13253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13337,7 +13337,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13390,7 +13390,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14207,7 +14207,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14260,7 +14260,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14352,7 +14352,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14413,7 +14413,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Tue, 11 Feb 2025 23:25:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14605,7 +14605,7 @@
       ]
     },
     {
-      "Route": "_framework/Frontend.4h6vbtxs93.pdb",
+      "Route": "_framework/Frontend.c03bt9jej1.pdb",
       "AssetFile": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -14615,7 +14615,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30656"
+          "Value": "32040"
         },
         {
           "Name": "Content-Type",
@@ -14623,11 +14623,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I=\""
+          "Value": "\"/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:44 GMT"
+          "Value": "Fri, 21 Aug 2026 18:01:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14637,7 +14637,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4h6vbtxs93"
+          "Value": "c03bt9jej1"
         },
         {
           "Name": "label",
@@ -14645,18 +14645,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I="
+          "Value": "sha256-/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8="
         }
       ]
     },
     {
-      "Route": "_framework/Frontend.4h6vbtxs93.pdb",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-4h6vbtxs93.gz",
+      "Route": "_framework/Frontend.c03bt9jej1.pdb",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-c03bt9jej1.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000046924124"
+          "Quality": "0.000044569238"
         }
       ],
       "ResponseHeaders": [
@@ -14666,15 +14666,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21310"
+          "Value": "22436"
         },
         {
           "Name": "ETag",
-          "Value": "\"famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM=\""
+          "Value": "\"rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14694,13 +14694,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I=\""
+          "Value": "W/\"/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4h6vbtxs93"
+          "Value": "c03bt9jej1"
         },
         {
           "Name": "label",
@@ -14708,13 +14708,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I="
+          "Value": "sha256-/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8="
         }
       ]
     },
     {
-      "Route": "_framework/Frontend.4h6vbtxs93.pdb.gz",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-4h6vbtxs93.gz",
+      "Route": "_framework/Frontend.c03bt9jej1.pdb.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-c03bt9jej1.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14723,7 +14723,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21310"
+          "Value": "22436"
         },
         {
           "Name": "Content-Type",
@@ -14731,11 +14731,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM=\""
+          "Value": "\"rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14753,7 +14753,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4h6vbtxs93"
+          "Value": "c03bt9jej1"
         },
         {
           "Name": "label",
@@ -14761,168 +14761,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Frontend.9eoy8ivsgv.wasm",
-      "AssetFile": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "39701"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9eoy8ivsgv"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Frontend.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Frontend.9eoy8ivsgv.wasm",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-9eoy8ivsgv.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000062119518"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16097"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9eoy8ivsgv"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Frontend.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/Frontend.9eoy8ivsgv.wasm.gz",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-9eoy8ivsgv.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "16097"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9eoy8ivsgv"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/Frontend.wasm.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0="
+          "Value": "sha256-rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM="
         }
       ]
     },
@@ -14937,7 +14776,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30656"
+          "Value": "32040"
         },
         {
           "Name": "Content-Type",
@@ -14945,11 +14784,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I=\""
+          "Value": "\"/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:44 GMT"
+          "Value": "Fri, 21 Aug 2026 18:01:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14959,18 +14798,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I="
+          "Value": "sha256-/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8="
         }
       ]
     },
     {
       "Route": "_framework/Frontend.pdb",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-4h6vbtxs93.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-c03bt9jej1.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000046924124"
+          "Quality": "0.000044569238"
         }
       ],
       "ResponseHeaders": [
@@ -14980,15 +14819,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21310"
+          "Value": "22436"
         },
         {
           "Name": "ETag",
-          "Value": "\"famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM=\""
+          "Value": "\"rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15008,19 +14847,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I=\""
+          "Value": "W/\"/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eD7G5qC8Vaeh4T2Tktd9SAD0+Jw6SeDuDftxdu1Zr+I="
+          "Value": "sha256-/JS7GyluLsZQa9+YLIWcyNLFU093qSynVNms0DyceH8="
         }
       ]
     },
     {
       "Route": "_framework/Frontend.pdb.gz",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-4h6vbtxs93.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\820j4a4l7m-c03bt9jej1.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15029,7 +14868,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "21310"
+          "Value": "22436"
         },
         {
           "Name": "Content-Type",
@@ -15037,11 +14876,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM=\""
+          "Value": "\"rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15059,7 +14898,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-famUMIu+M/aPN2Z4ei4rcPVJ2dYUS2ju9+utUGB5sbM="
+          "Value": "sha256-rtlrhNHMRcSXqk6Z8FwXP73MD6rB07ZXLo8ry7quLYM="
         }
       ]
     },
@@ -15074,7 +14913,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39701"
+          "Value": "40213"
         },
         {
           "Name": "Content-Type",
@@ -15082,11 +14921,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ=\""
+          "Value": "\"DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:45 GMT"
+          "Value": "Fri, 21 Aug 2026 18:01:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15096,18 +14935,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ="
+          "Value": "sha256-DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs="
         }
       ]
     },
     {
       "Route": "_framework/Frontend.wasm",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-9eoy8ivsgv.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-zcexm057ac.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000062119518"
+          "Quality": "0.000061225739"
         }
       ],
       "ResponseHeaders": [
@@ -15117,15 +14956,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16097"
+          "Value": "16332"
         },
         {
           "Name": "ETag",
-          "Value": "\"I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0=\""
+          "Value": "\"ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15145,19 +14984,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ=\""
+          "Value": "W/\"DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/88sI3/R13+TCAn2wvQ04swy1vYLFFTGafmpvDPxTSQ="
+          "Value": "sha256-DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs="
         }
       ]
     },
     {
       "Route": "_framework/Frontend.wasm.gz",
-      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-9eoy8ivsgv.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-zcexm057ac.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15166,7 +15005,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16097"
+          "Value": "16332"
         },
         {
           "Name": "Content-Type",
@@ -15174,11 +15013,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0=\""
+          "Value": "\"ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Aug 2026 21:13:47 GMT"
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15196,7 +15035,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I0Kks3AJG+T/mv99lWDHCsOHp1bkqPLmMGyqYEXxQs0="
+          "Value": "sha256-ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Frontend.zcexm057ac.wasm",
+      "AssetFile": "A:\\Demos\\Frontend\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Frontend.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40213"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Aug 2026 18:01:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zcexm057ac"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Frontend.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Frontend.zcexm057ac.wasm",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-zcexm057ac.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000061225739"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16332"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zcexm057ac"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Frontend.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DVM7rVou472arMSOB3Ow96bKJnNyLKwz7wcA5UgKaCs="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Frontend.zcexm057ac.wasm.gz",
+      "AssetFile": "A:\\Demos\\Frontend\\obj\\Debug\\net9.0\\compressed\\idv3gmpu33-zcexm057ac.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Aug 2026 18:02:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zcexm057ac"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/Frontend.wasm.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ey5HUoRZas4gx2Iewfmc6u64yRJ0k/oP7sXHdtS75rU="
         }
       ]
     },

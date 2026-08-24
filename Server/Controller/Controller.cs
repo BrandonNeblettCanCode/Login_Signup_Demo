@@ -153,7 +153,7 @@ namespace Server.Controller
 
                 await _context.SaveChangesAsync();
 
-                return Ok(new ApiResponse {Success = true, Message = "Email verified"});
+                return Ok(new ApiResponse {Success = true, Message = userCheck.Email});
 
             } catch (Exception Ex) {
                 return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});

@@ -1,0 +1,38 @@
+@using Frontend.Services;
+
+@page "/otp/{email}"
+@using Frontend.Dtos
+@inject HttpService httpService;
+@inject NavigationManager Nav;
+
+<EditForm Model="" Context="">
+    
+</EditForm>
+
+@code {
+    [Parameter]
+    public string email {get; set;} = string.Empty;
+    private OtpDto otpDto = new OtpDto();
+    private string errorMsg = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        otpDto.Email = email;
+    }
+
+    public async Task SendOtp(){
+        try {
+            var request = await httpService.SendOtpAsync(otpDto);
+            var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
+
+            if(response.Success != true)
+                throw new Exception(response.Errors);
+            else 
+                Nav.NavigateTo($"/otp/{response.Message}/reset");
+
+        } catch (Exception Ex) {
+            errorMsg = Ex.Message;
+        }
+        
+    }
+}
