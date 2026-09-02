@@ -1,34 +1,49 @@
+@using System.Threading.Tasks
 @using Frontend.Services;
 
-@page "/otp/{email}"
+@page "/otp"
 @using Frontend.Dtos
 @inject HttpService httpService;
 @inject NavigationManager Nav;
 
-<EditForm Model="" Context="">
-    
+<EditForm Model="otpDto" class="d-flex flex-column w-25 mx-auto" OnValidSubmit="SendOtp">
+    <DataAnnotationsValidator />
+    <div class="d-flex flex-column text-center">
+        <label for="otp" class="">Please enter a valid 'OTP' code</label>
+        <InputText class="mt-4"  id="otp" @bind-Value="otpDto.Otp"/>
+    </div>
+    <button class="w-25 mx-auto mt-4">Verify</button>
+    <p class="mt-4">@errorMsg</p>
+    <ValidationSummary />
 </EditForm>
 
 @code {
-    [Parameter]
-    public string email {get; set;} = string.Empty;
     private OtpDto otpDto = new OtpDto();
     private string errorMsg = string.Empty;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        otpDto.Email = email;
+        TokenCheckResponse? OtpSentCheck = await httpService.CheckForToken("OTP");
+        TokenCheckResponse? OtpVerifiedCheck = await httpService.CheckForToken("OTP_Verified");
+
+        Console.WriteLine(OtpSentCheck.Status);
+
+        if(!OtpSentCheck.Status)
+            Nav.NavigateTo("/emailverify");
+        else if(OtpVerifiedCheck.Status)
+            Nav.NavigateTo("/otp/reset");
+        else
+            otpDto.Email = OtpSentCheck.Email;
     }
 
     public async Task SendOtp(){
         try {
-            var request = await httpService.SendOtpAsync(otpDto);
-            var response = await request.Content.ReadFromJsonAsync<ApiResponse>();
+            var response = await httpService.SendOtpAsync(otpDto);
 
             if(response.Success != true)
                 throw new Exception(response.Errors);
             else 
-                Nav.NavigateTo($"/otp/{response.Message}/reset");
+                Nav.NavigateTo($"/otp/reset");
 
         } catch (Exception Ex) {
             errorMsg = Ex.Message;

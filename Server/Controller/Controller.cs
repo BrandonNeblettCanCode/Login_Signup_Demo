@@ -141,19 +141,21 @@ namespace Server.Controller
 
                 var userCheck = await _context.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
                 if(userCheck is null)
-                    return BadRequest(new ApiResponse
-                    {
+                    return BadRequest(new ApiResponse {
                         Success = false,
                         Errors = "No account found associated with email, please try again"
                     });
                 
                 var otp = generateOTP();
                 await SendEmailAsync(dto.Email, "demos@gmail.com", otp);
-                userCheck.Otp = generateJwtToken(userCheck, otp, DateTime.UtcNow.AddSeconds(20));
+
+                var otpToken = generateJwtToken(userCheck, otp, DateTime.UtcNow.AddSeconds(200));
+
+                userCheck.Otp = otpToken;
 
                 await _context.SaveChangesAsync();
 
-                return Ok(new ApiResponse {Success = true, Message = userCheck.Email});
+                return Ok(new ApiResponse {Success = true, Message = otpToken});
 
             } catch (Exception Ex) {
                 return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});
@@ -175,13 +177,13 @@ namespace Server.Controller
                 var user = state.User;
 
                 if(user.HasClaim(c => c.Value == dto.Otp))
-                    return Ok(new ApiResponse {Success = true, Message = user.FindFirst(ClaimTypes.NameIdentifier)?.Value});
+                    return Ok(new ApiResponse {Success = true, Message = generateJwtToken(getOtp, user.FindFirst(ClaimTypes.Authentication)?.Value!, DateTime.UtcNow.AddSeconds(180))});
                 else 
                     return BadRequest(new ApiResponse {Success = false, Errors = "Invalid 'Otp', please try again"});
            }
            catch (Exception Ex)
            {
-                return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message});
+                return BadRequest(new ApiResponse {Success = false, Errors = Ex.Message.Contains("IDX10223") ? "OTP has expired, please request a new one":Ex.Message});
            }
         }
 
@@ -255,14 +257,16 @@ namespace Server.Controller
             {
                 claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.NameIdentifier, otp)
+                    new Claim(ClaimTypes.Authentication, otp),
+                    new Claim(ClaimTypes.Email, user.Email)
                 };
             }
             else
             {
                 claims = new List<Claim>{
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Username)
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.Email, user.Email)
                 };
             }
 

@@ -21,13 +21,26 @@
     public OtpDto otpDto = new OtpDto();
     public string errorMsg = string.Empty;
 
+    protected override async Task OnInitializedAsync()
+    {
+        TokenCheckResponse? OtpSentCheck = await httpService.CheckForToken("OTP");
+        TokenCheckResponse? OtpVerifiedCheck = await httpService.CheckForToken("OTP_Verified");
+        Console.WriteLine(OtpSentCheck.Status);
+
+        if(OtpSentCheck.Status) {
+            Nav.NavigateTo("/otp");
+        }
+        else if(OtpVerifiedCheck.Status)
+            Nav.NavigateTo("/otp/reset");
+    }
+
     public async Task EmailVerify(){
         try {
             errorMsg = "";
             var response = await httpService.EmailAsync(otpDto);
             
             if(response.Success == true)
-                Nav.NavigateTo($"/otp/{response.Message}");
+                Nav.NavigateTo("/otp");
             else 
                 throw new Exception(response.Errors);
         } catch (Exception Ex) {

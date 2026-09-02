@@ -1225,10 +1225,10 @@ A:\Demos\Frontend\obj\Debug\net9.0\Frontend.dll
 A:\Demos\Frontend\obj\Debug\net9.0\refint\Frontend.dll
 A:\Demos\Frontend\obj\Debug\net9.0\Frontend.pdb
 A:\Demos\Frontend\obj\Debug\net9.0\ref\Frontend.dll
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.c03bt9jej1.pdb
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.zcexm057ac.wasm
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.c03bt9jej1.pdb.gz
-A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.zcexm057ac.wasm.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-zcexm057ac.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-c03bt9jej1.gz
-A:\Demos\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-sjxvbobz3r.gz
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.pu65pq22gw.pdb
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.8d0o7iagxw.wasm
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.pu65pq22gw.pdb.gz
+A:\Demos\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.8d0o7iagxw.wasm.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-8d0o7iagxw.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-pu65pq22gw.gz
+A:\Demos\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-cx1ebcdja9.gz
